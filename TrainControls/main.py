@@ -13,23 +13,21 @@ class RootControler(object):
 
 @cherrypy.expose
 class TrainControler(object):    
-    def __init__(self):
-        self.text = 'hello'
+    def __init__(self, train):
+        self.train = train
 
     @cherrypy.tools.accept(media='text/plain')
     def GET(self):
-        return self.text
+        return "hello"
 
-    def POST(self, length=8):
-        some_string = ''.join(random.sample(string.hexdigits, int(length)))
-        self.text = some_string
-        return some_string
+    def POST(self):
+        return "hello"
 
-    def PUT(self, another_string):
-        self.text = another_string
+    def PUT(self, data):
+        pass
 
     def DELETE(self):
-        self.text = 'hello'
+        self.train.Speed(0)
 
 
 if __name__ == '__main__':
@@ -49,5 +47,5 @@ if __name__ == '__main__':
     }
 
     webapp = RootControler()
-    webapp.train = TrainControler()
+    webapp.train = TrainControler('train')
     cherrypy.quickstart(webapp, '/', conf)

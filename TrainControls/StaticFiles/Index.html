@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        JR500 Controls
-    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Table trains</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/static/train_controls.css" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Table trains</a>
+    </nav>
+    <main role="main" class="container">
+        <div class="row">
+            <h1>Train controls</h1> 
+        </div>
 
+        <div class="row align-items-center">
+            <div class="col-md-auto">
+                <a>Direction:</a>
+            </div>
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Foward</button>
+                    <button type="button" class="btn btn-secondary">Backward</button>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-auto">
+                <a>Speed:</a>
+            </div>
+
+            <div class="col">
+                <input style="margin: 10px 0px 0px 20px;" type="range" class="custom-range" min="0" max="100" id="speedSlider" step="1">
+            </div>
+        </div>
+    </main>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

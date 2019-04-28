@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f6558022-1b85-4855-ab26-4740eb5cd51c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TrainControls.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,9 +22,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TrainControls.py" />
-  </ItemGroup>
-  <ItemGroup>
     <Interpreter Include="PiEnv\">
       <Id>PiEnv</Id>
       <Version>3.6</Version>
@@ -40,6 +37,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="StaticFiles\Index.html" />
+    <Content Include="StaticFiles\train_controls.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
